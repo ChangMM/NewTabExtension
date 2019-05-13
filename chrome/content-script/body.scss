@@ -1,0 +1,7 @@
+body{
+  transition: all ease 0.3s;
+  transform: translateY(0px);
+  &.flow-bottom{
+    transform: translateY(60px);
+  }
+}

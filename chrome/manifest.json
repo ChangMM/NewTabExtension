@@ -1,0 +1,39 @@
+{
+  "version": "1.0.1",
+  "name": "Fries Tab",
+  "short_name": "薯条标签页",
+  "manifest_version": 2,
+  "description": "优雅的静态壁纸与灵性的动态壁纸的新标签页，优化快捷的搜索工具，每天推荐一篇精选文章。",
+  "homepage_url": "https://weibo.com/u/3897687414",
+  "icons" : {
+    "16" : "./static/img/logo_16.png",
+    "48" : "./static/img/logo_48.png",
+    "128" : "./static/img/logo_128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "./static/img/logo_19.png",
+      "38": "./static/img/logo_38.png"
+    }
+  },
+  "chrome_url_overrides" : {
+   "newtab": "index.html"
+  },
+  "background":
+	{
+		"scripts": ["./static/js/manifest.js", "./static/js/vendor.js", "./static/js/background.js"]
+	},
+  "content_scripts": [
+    {
+			"matches": ["<all_urls>"],
+			"js": ["./static/js/manifest.js", "./static/js/vendor.js", "./static/js/inject_search.js"],
+      "css": ["./static/css/inject_search.css"]
+    }
+  ],
+  "permissions": [
+    "notifications",
+    "activeTab",
+    "storage"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
