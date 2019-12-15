@@ -17,23 +17,21 @@
     }
   },
   "chrome_url_overrides" : {
-   "newtab": "index.html"
+    "newtab": "index.html"
   },
-  "background":
-	{
-		"scripts": ["./static/js/manifest.js", "./static/js/vendor.js", "./static/js/background.js"]
-	},
+  "background": {
+    "scripts": ["./static/js/manifest.js", "./static/js/vendor.js", "./static/js/background.js"]
+  },
   "content_scripts": [
     {
-			"matches": ["<all_urls>"],
-			"js": ["./static/js/manifest.js", "./static/js/vendor.js", "./static/js/inject_search.js"],
+      "matches": ["<all_urls>"],
+      "js": ["./static/js/manifest.js", "./static/js/vendor.js", "./static/js/inject_search.js"],
       "css": ["./static/css/inject_search.css"]
     }
   ],
   "permissions": [
-    "notifications",
-    "activeTab",
-    "storage"
+    "storage",
+    "unlimitedStorage"
   ],
   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

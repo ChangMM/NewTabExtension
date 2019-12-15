@@ -44,7 +44,7 @@ export default {
   box-sizing: border-box;
 }
 body{
-  font-family: 'PingFang SC', 'Source Sans Pro', 'Hiragino Sans GB', 'Helvetica Neue',Helvetica,'Microsoft Yahei',arial,sans-serif;
+  font-family: 'PingFang SC', 'Source Sans Pro', 'Hiragino Sans GB', 'Helvetica Neue', Helvetica, 'Microsoft Yahei', arial, sans-serif;
   line-height: 1.5;
   font-size: 14px;
   letter-spacing: 1.5px;
